@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tag = prompt("enter tag");
+        var txt = prompt("enter text");
+
+        var crtag = document.createElement(tag)
+        var crtxt = document.createTextNode(txt)
+
+        crtag.appendChild(crtxt)
+        document.getElementsByTagName('body')[0].appendChild(crtag)
+    </script>
+    
+</body>
+</html>

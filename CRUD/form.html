@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 300px;
+            width: 300px;
+            border: 1px solid red;
+        }
+        input{
+            padding: 5px;
+            margin: 5px;
+        }
+
+        section{
+            display: flex;
+            justify-content: space-evenly
+        }
+
+        .fm {
+            text-align: center;
+        }
+        .mainn{
+            display: none;
+            text-align: center;
+        }
+        .up{
+            display: none;
+            text-align: center;
+        }
+        ._table{
+            margin-top: 50px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="fm">
+            <h1>Input Form</h1>
+            <input type="text" placeholder="Enter name"><br>
+            <input type="text" placeholder="Enter contact"><br>
+            <input type="text" placeholder="Enter email"><br>
+            <input type="date" placeholder="Enter DOB"><br>
+            <input type="text" placeholder="Enter roll"><br>
+            <button onclick="clk()">Click</button>
+
+        </div>
+   
+        <div class="mainn">
+            <h1>TechRel Form</h1>
+            <p>Name:<span></span></p>
+            <p>Contact:<span></span></p>
+            <p>Email:<span></span></p>
+            <p>DOB:<span></span></p>
+            <p>Roll:<span></span></p>
+            <button onclick="finalForm()">Submit</button>
+            <button onclick="_edit()">Edit</button>
+
+        </div>
+        <div class="up">
+            <h1>Update Form</h1>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text"><br>
+            <button onclick="_update()">Update</button>
+
+        </div>
+    </section>
+<section class="_table">
+    <center>
+     <table border="1" width="70%">
+         <thead>
+             <tr>
+                 <th>ID</th>
+                 <th>NAME</th>
+                 <th>CONTACT</th>
+                 <th>EMAIL</th>
+                 <th>DOB</th>
+                 <th>ROLL</th>
+                 
+             </tr>
+          </thead>
+           <tbody>
+          
+
+           </tbody>
+     </table>
+    </center>
+ </section>
+    <script>
+        function clk() {
+            var name = document.getElementsByTagName('input')[0].value
+            var contact = document.getElementsByTagName('input')[1].value
+            var email = document.getElementsByTagName('input')[2].value
+            var dob = document.getElementsByTagName('input')[3].value
+            var roll = document.getElementsByTagName('input')[4].value
+
+            document.getElementsByTagName('span')[0].innerText = name
+            document.getElementsByTagName('span')[1].innerText = contact
+            document.getElementsByTagName('span')[2].innerText = email
+            document.getElementsByTagName('span')[3].innerText = dob
+            document.getElementsByTagName('span')[4].innerText = roll
+
+            document.getElementsByClassName('mainn')[0].style.display="block"
+
+
+        }
+        function _edit() {
+            var name = document.getElementsByTagName('input')[0].value
+            var contact = document.getElementsByTagName('input')[1].value
+            var email = document.getElementsByTagName('input')[2].value
+            var dob = document.getElementsByTagName('input')[3].value
+            var roll = document.getElementsByTagName('input')[4].value
+
+            document.getElementsByTagName('input')[5].value = name
+            document.getElementsByTagName('input')[6].value = contact
+            document.getElementsByTagName('input')[7].value = email
+            document.getElementsByTagName('input')[8].value = dob
+            document.getElementsByTagName('input')[9].value = roll
+            document.getElementsByClassName('up')[0].style.display="block"
+
+
+        }
+        function _update() {
+            var _name = document.getElementsByTagName('input')[5].value
+            var _con = document.getElementsByTagName('input')[6].value
+            var _email = document.getElementsByTagName('input')[7].value
+            var _dob = document.getElementsByTagName('input')[8].value
+            var _roll = document.getElementsByTagName('input')[9].value
+
+
+            document.getElementsByTagName('span')[0].innerText = _name
+            document.getElementsByTagName('span')[1].innerText = _con
+            document.getElementsByTagName('span')[2].innerText = _email
+            document.getElementsByTagName('span')[3].innerText = _dob
+            document.getElementsByTagName('span')[4].innerText = _roll
+
+            document.getElementsByClassName('up')[0].style.display="none"
+
+
+        }
+        var batch=[];
+        function finalForm()
+        {
+            var _name = document.getElementsByTagName('span')[0].innerText
+            var _contact = document.getElementsByTagName('span')[1].innerText
+            var _email = document.getElementsByTagName('span')[2].innerText
+            var _dob = document.getElementsByTagName('span')[3].innerText
+            var _roll = document.getElementsByTagName('span')[4].innerText
+
+            var obj = {
+                name: _name,
+                contact: _contact,
+                email: _email,
+                dob:_dob,
+                roll: _roll,
+                
+            }
+            batch.push(obj);
+            console.log(batch)
+            var _tbody = document.getElementsByTagName('tbody')[0]
+            _tbody.innerHTML = ''
+            for (i = 0; i < batch.length; i++) {
+                _tbody.innerHTML +=  `
+                <tr>
+                    <td>${i}</td>
+                    <td>${batch[i].name}</td>
+                    <td>${batch[i].contact}</td>
+                    <td>${batch[i].email}</td>
+                    <td>${batch[i].dob}</td>
+                    <td>${batch[i].roll}</td>
+                    
+                </tr>
+               
+               `
+                document.getElementsByClassName('_table')[0].style.display="block"
+            
+
+            }
+    }
+
+    </script>
+</body>
+
+</html>

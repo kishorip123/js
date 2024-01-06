@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div> <h1> Data</h1>
+            <input type="text" placeholder="enter name"><br>
+            <input type="text" placeholder="enter contact"><br>
+            <input type="text" placeholder="enter email"><br>
+            <input type="text" placeholder="enter roll"><br>
+            <button onclick="sub()">Submit</button>
+        </div>
+        <div>
+            <h1>update Data</h1>
+            <input type="text" placeholder="enter name"><br>
+            <input type="text" placeholder="enter contact"><br>
+            <input type="text" placeholder="enter email"><br>
+            <input type="text" placeholder="enter roll"><br>
+            <input type="hidden" placeholder="enter index"><br>
+            <button onclick="_update()">Update</button>
+        </div>
+    </section>
+    
+        <div>
+            <table border="10">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Roll</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    
+                </tbody>
+            </table>
+        </div>
+    
+    <script>
+        var batch=[
+            {
+                name:'kishu',
+                contact:1236547896,
+                email:"kishu@gmail",
+                roll:"devloper"
+            }
+        ]
+        function sub()
+        {
+            var _name=document.getElementsByTagName('input')[0].value
+            var _con=document.getElementsByTagName('input')[1].value
+            var _email=document.getElementsByTagName('input')[2].value
+            var _roll=document.getElementsByTagName('input')[3].value
+
+
+            var ob={
+                name:_name,
+                contact:_con,
+                email:_email,
+                roll:_roll
+            }
+            batch.push(ob);
+            console.log(batch);
+            document.getElementsByTagName('input')[0].value=''
+            document.getElementsByTagName('input')[1].value=''
+            document.getElementsByTagName('input')[2].value=''
+            document.getElementsByTagName('input')[3].value=''
+            
+            ReadData()
+        }
+        function ReadData()
+        {
+            var divv=document.getElementsByTagName('tbody')[0]
+            divv.innerHTML='';
+            for(var i=0;i<batch.length;i++)
+            {
+                divv.innerHTML +=`
+                
+                <tr>
+                        <td>${i}</td>
+                        <td>${batch[i].name}</td>
+                        <td>${batch[i].contact}</td>
+                        <td>${batch[i].email}</td>
+                        <td>${batch[i].roll}</td>
+                        <td> <button onclick="_delete(${i})">delete</button>
+                            <button onclick="_edit(${i})">Update</button></td>
+                    </tr>
+                
+                `
+            }
+        }
+        function _delete(index)
+        {
+            batch.splice(index,1);
+            ReadData();
+        }
+        function _edit(index)
+        {
+            document.getElementsByTagName('input')[4].value=batch[index].name
+            document.getElementsByTagName('input')[5].value=batch[index].contact
+            document.getElementsByTagName('input')[6].value=batch[index].email
+            document.getElementsByTagName('input')[7].value=batch[index].roll
+            document.getElementsByTagName('input')[8].value=index
+
+        }
+        function _update()
+        {
+            var _name=document.getElementsByTagName('input')[4].value
+            var _con=document.getElementsByTagName('input')[5].value
+            var _email=document.getElementsByTagName('input')[6].value
+            var _roll=document.getElementsByTagName('input')[7].value
+            var _index=document.getElementsByTagName('input')[8].value
+
+
+            var ob={
+                name:_name,
+                contact:_con,
+                email:_email,
+                roll:_roll
+            }
+            batch.splice(_index,1,ob);
+            console.log(batch);
+            document.getElementsByTagName('input')[4].value=''
+            document.getElementsByTagName('input')[5].value=''
+            document.getElementsByTagName('input')[6].value=''
+            document.getElementsByTagName('input')[7].value=''
+            ReadData();
+
+        }
+    </script>
+    
+</body>
+</html>

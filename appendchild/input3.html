@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter tag"><br>
+    <input type="text" placeholder="enter attribute"><br>
+    <input type="text" placeholder="enter value"><br>
+    <input type="text" placeholder="enter txt"><br>
+    <button onclick="abc()">click</button><br>
+
+
+    <script>
+        function abc(){
+
+        
+        var i = document.getElementsByTagName('input')[0].value
+        var ia = document.getElementsByTagName('input')[1].value
+        var iavalue = document.getElementsByTagName('input')[2].value
+        var itxt = document.getElementsByTagName('input')[3].value
+
+
+        var tag = document.createElement(i)
+        var tx = document.createTextNode(itxt)
+        tag.appendChild(tx)
+        document.getElementsByTagName('body')[0].appendChild(tag);
+
+        document.getElementsByTagName(i)[0].setAttribute(ia,iavalue)
+        
+        }
+
+    </script>
+    
+</body>
+</html>

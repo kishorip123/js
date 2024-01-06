@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            text-align: center;
+            margin: 50px;
+
+        }
+        div{
+            
+            height: 467px;
+            width: 50%;
+            padding: 10px;
+            margin: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <label for="">Name</label>
+            <input type="text" placeholder="Enter Name">
+
+            <label for="">Address</label>
+            <input type="text" placeholder="enter Address">
+
+            <label for="">Email</label>
+            <input type="text" placeholder="enter Email">
+
+            <label for="">Contact</label>
+            <input type="text" placeholder="enter Contact">
+
+            <label for="">gender</label>
+            <input type="radio" value="male" name="gender">male
+            <input type="radio" value="male" name="gender">male
+            <input type="radio" value="male" name="gender">male
+
+            <button onclick="sub()">submit</button>
+        </div>
+
+
+
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </section>
+    <script>
+        function sub()
+        {
+            var name = document.getElementsByTagName('input')[0].value
+            var add = document.getElementsByTagName('input')[1].value
+            var email = document.getElementsByTagName('input')[2].value
+            var contact = document.getElementsByTagName('input')[3].value
+
+
+             document.getElementsByTagName('p')[0].innerText = name
+             document.getElementsByTagName('p')[1].innerText = add
+             document.getElementsByTagName('p')[2].innerText = email
+             document.getElementsByTagName('p')[3].innerText = contact
+             
+e
+            
+            
+            
+
+        }
+
+    </script>
+    
+</body>
+</html>

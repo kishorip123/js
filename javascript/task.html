@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+        }
+        div{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+           <img src="https://png.pngtree.com/png-vector/20230103/ourmid/pngtree-a-girl-logo-hair-png-image_6550514.png" onclick="pic()"><br>
+           <h1 onclick="name()"> kishori pawar</h1><br>
+           <h1 onclick="pass()"> kishu@123</h1><br>
+           <h1 onclick="email()">kishoripawar@123</h1><br>
+           <h1 onclick="con()">7972648712</h1><br>
+          
+            
+
+        </div>
+
+
+        <div>
+            <input type="text" name="" id=""><br>
+            <input type="text"><br>
+            <input type="text"><br>
+            <input type="text"><br>
+            <input type="text"><br>
+            
+            
+
+        </div>
+    </section>
+
+    <script>
+        function pic()
+        {
+            var p = document.getElementsByTagName('img')[0].src
+            document.getElementsByTagName('input')[0].value = p
+            
+           
+        }
+        function name(){
+
+            var n = document.getElementsByTagName('h1')[0].innerText
+            document.getElementsByTagName('input')[1].value = n
+        }
+        function pass()
+        {
+            var pa = document.getElementsByTagName('h1')[1].innerText
+            document.getElementsByTagName('input')[2].value = pa
+        }
+        function email()
+        {
+            var e = document.getElementsByTagName('h1')[2].innerText
+            document.getElementsByTagName('input')[3].value = e
+
+        }
+        function con()
+        {
+            var c = document.getElementsByTagName('h1')[3].innerText
+            document.getElementsByTagName('input')[4].value = c
+
+        }
+        
+    </script>
+    
+</body>
+</html>

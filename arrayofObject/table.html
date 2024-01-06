@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>contact</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+
+
+    </table>
+    <script>
+        var data =[
+            {
+                id:1,
+                name:"kishori",
+                contact:789654563,
+                email:"kishori123@"
+            },
+            {
+                id:2,
+                name:"kishu",
+                contact:789654563,
+                email:"kishori123@"
+            },
+            {
+                id:3,
+                name:"sakshi",
+                contact:789654563,
+                email:"kishori123@"
+            },
+            {
+                id:4,
+                name:"pawar",
+                contact:789654563,
+                email:"kishori123@"
+            },
+            {
+                id:5,
+                name:"kish",
+                contact:789654563,
+                email:"kishori123@"
+            },
+            {
+                id:6,
+                name:"tax",
+                contact:789654563,
+                email:"kishori123@"
+            }
+            
+            
+        ]
+        var d= document.getElementsByTagName('tbody')[0]
+
+        for(var i=0;i<data.length;i++)
+        {
+            d.innerHTML +=`
+            <tr>
+                <td>${data[i].id}</td>
+                <td>${data[i].name}</td>
+                <td>${data[i].contact}</td>
+                <td>${data[i].email}</td>
+            </tr>`
+
+
+        }
+    </script>
+    
+</body>
+</html>

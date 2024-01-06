@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid red;
+            height: 200px;
+            width: 50%;
+            margin: 20px;
+        }
+        input
+        {
+            margin: 10px;
+        }
+        body{display: flex;}
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text"><br>
+        <input type="text"><br>
+        <input type="number"><br>
+        <input type="email"><br>
+        <button onclick="abc()">click</button>
+    </div>
+    <div> </div>
+    <script>
+        function abc()
+        {
+            var name = document.getElementsByTagName('input')[0].value
+            var lname = document.getElementsByTagName('input')[1].value
+            var num = document.getElementsByTagName('input')[2].value       //getting input user
+            var email = document.getElementsByTagName('input')[3].value
+            var div2 = document.getElementsByTagName('div')[1]
+
+            var tag1 = document.createElement('p')
+            var tag2 = document.createElement('p')
+            var tag3 = document.createElement('p')
+            var tag4 = document.createElement('p')
+
+                           // for spacing
+
+            var txt1 = document.createTextNode(name)
+            var txt2 = document.createTextNode(lname)         //create
+            var txt3 = document.createTextNode(num)
+            var txt4 = document.createTextNode(email)
+
+            tag1.appendChild(txt1)
+            tag2.appendChild(txt2)
+            tag3.appendChild(txt3)
+            tag4.appendChild(txt4)
+
+            div2.appendChild(tag1)
+            div2.appendChild(tag2)
+            div2.appendChild(tag3)
+            div2.appendChild(tag4)
+
+
+
+
+            
+        }
+        
+    </script>
+    
+</body>
+</html>

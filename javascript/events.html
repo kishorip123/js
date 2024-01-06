@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloribus, adipisci incidunt libero magnam sit, neque a rem nulla facere vero esse distinctio voluptate corporis harum. Tempora eaque sequi culpa?</p>
+    
+            <button onclick="_click()">click</button>
+            <button oncontextmenu="_Rclick()">right click</button>
+
+            <h1 onmouseenter="mouseEnter()" onmouseleave="mouseleave()" > hi am kishori pawar from maharastra</h1>
+            <hr>
+            <input type="text" value="" onkeyup="_keyup(value)">
+           <h4></h4>
+           <hr>
+           <input type="text" value="" onkeypress="_keypress(value)">
+           <h4></h4>
+           <hr>
+           <input type="text" value="" onkeydown="_keydown(value)">
+           <h4></h4>
+        </div>
+    </section>
+    <script>
+        function _click()
+        {
+            document.getElementsByTagName('p')[0].style.color = "red"
+
+        }
+        function _Rclick()
+        {
+            document.getElementsByTagName('p')[0].style.backgroundColor = "yellow"
+
+        }
+        function mouseEnter()
+        {
+            document.getElementsByTagName('h1')[0].style.display = "none"
+
+        }
+        function mouseleave()
+        {
+            document.getElementsByTagName('h1')[0].style.display = "block"
+
+        }
+        function _keyup(txt)
+        {
+            document.getElementsByTagName('h4')[0].innerText = txt
+        }
+        function _keypress(txt)
+        {
+            document.getElementsByTagName('h4')[1].innerText = txt
+        }
+        function _keydown(txt)
+        {
+            document.getElementsByTagName('h4')[2].innerText = txt
+        }
+       
+    </script>
+    
+</body>
+</html>//8

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            margin: 5px;
+            height: 20px;
+            width: 70%;
+            
+        }
+        div{
+            border: 2px solid red;
+            width: 30%;
+            height: 200px;
+        }
+        button{
+            background-color: aqua;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text"><br>
+        <input type="text"><br>
+        <input type="number"><br> 
+        <input type="email"><br>
+        <button onclick="abc()">click</button>
+      </div>
+
+
+    <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+    </div>
+    <script>
+        function abc()
+        {
+            var z = document.getElementsByTagName('input')[0].value
+            var q = document.getElementsByTagName('input')[1].value
+            var r = document.getElementsByTagName('input')[2].value
+            var s = document.getElementsByTagName('input')[3].value
+
+            document.getElementsByTagName('p')[0].innerText=z;
+            document.getElementsByTagName('p')[1].innerText=q;
+            document.getElementsByTagName('p')[2].innerText=r;
+            document.getElementsByTagName('p')[3].innerText=s;
+            console.log(click);
+        }
+    </script>
+    
+</body>
+</html>

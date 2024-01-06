@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            text-align: center;
+            margin: 10px;
+        }
+
+        div {
+            width: 100%;
+            height: 200px;
+            border: 2px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+        input{
+            margin: 5px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h3></h3>
+            <input type="text" placeholder="Enter name"><br>
+            <input type="text" placeholder="contact"><br>
+            <input type="text" placeholder="Email"><br>
+         
+
+            <button onclick="submit()">Submit</button>
+
+        </div>
+        <div>
+            <img src="" alt="">
+            <h1></h1>
+           <p></p>
+           <p></p>
+        </div>
+    </section>
+
+
+
+    <script>
+        function submit(){
+          
+            var img = document.getElementsByTagName('h3')[0].value
+            var name = document.getElementsByTagName('input')[0].value
+            var contact = document.getElementsByTagName('input')[1].value
+            var email = document.getElementsByTagName('input')[2].value
+           
+            
+
+            document.getElementsByTagName('img')[0].src = "https://i.pinimg.com/originals/ac/57/3b/ac573b439cde3dec8ca1c6739ae7f628.jpg"
+            document.getElementsByTagName('h1')[0].innerText = name
+            document.getElementsByTagName('p')[0].innerText = contact
+            document.getElementsByTagName('p')[1].innerText = email
+           
+            
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

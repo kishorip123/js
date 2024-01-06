@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            text-align: center;
+            margin: 50px;
+
+        }
+
+        .abc {
+            width: 50%;
+            height: 450px;
+           
+            padding: 20px;
+        }
+        div {
+            border: 1px solid black;
+            box-shadow: 10px 3px 14px black;
+            border-radius: 30px 0px 30px 0px;
+            height: 467px;
+            width: 50%;
+            padding: 10px;
+            margin: 10px;
+            background-image: linear-gradient(pink,purple);
+            
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        button {
+            margin: 20px;
+        }
+
+        marquee {
+            font-size: 40px;
+            margin: 35px;
+            background-color: aqua;
+            color: black;
+        }
+    
+        img{
+            width: 70px;
+            height: 70px;
+            
+        }
+        h1{
+            font-size: 45px;
+            text-shadow: 5px 3px 5px gray;
+        }
+        label{
+            padding: 0px 23px 0px 0px;
+        }
+        button{
+            margin: 17px;
+             padding: 5px 30px 5px 30px;
+             border-radius: 7px 7px 7px 7px;
+        }
+        button:hover{
+            background-color: goldenrod;
+            color: black;
+        }
+        h4{
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <marquee behavior="alternate" direction="right">Welcome to Facebook</marquee>
+    </nav>
+
+    <section>
+
+        <div class="abc">
+            <h1><i>Registration Form</i></h1>
+
+            <label>Photo</label>
+            <input type="text" placeholder="enter url"><br>
+
+
+            <label for="name">Name</label>
+            <input type="text" placeholder="enter your Name"><br>
+
+            <label for="">Address</label>
+            <textarea name style="padding: 0px 0px 0px 10px;" id="" cols="21" rows="3"></textarea>
+            <br>
+
+            <label for="">Contact</label>
+            <input style="padding: 0px 0px 0px 15px;" type ="text" placeholder="enter number"><br>
+
+            <label for="">Email</label>
+            <input type="text" placeholder="Email"><br>
+
+            <label>Date of Birth</label>
+            <input type="date"><br>
+
+            <label>Gender</label>
+            <input type="radio" onclick="ans(value)" value="male" name="gender">Male
+            <input type="radio" onclick="ans(value)" value="female" name="gender">Female
+            <input type="radio" onclick="ans(value)" value="Other" name="gender">Other<br>
+
+
+
+            <button onclick="abc()">Submit</button>
+            <button onclick="clr()">Cancel</button>
+
+        </div>
+
+        <div>
+            <h1><i></i></h1>
+          
+            <img src="" alt="">
+           <h4></h4>
+           <h4></h4>
+           <h4></h4>
+           <h4></h4>
+           <h4></h4>
+            <h5></h5>
+            <p></p>
+
+        </div>
+    </section>
+    <script>
+        
+        function clr() {
+            document.getElementsByTagName('h4')[0].innerText = ''
+            document.getElementsByTagName('h4')[1].innerText = ''
+            document.getElementsByTagName('h4')[2].innerText = ''
+            document.getElementsByTagName('h4')[3].innerText = ''
+            document.getElementsByTagName('h4')[4].innerText = ''
+            document.getElementsByTagName('h5')[0].innerText = ''
+            document.getElementsByTagName('img')[0].innerText = ''
+            
+            
+        }
+        function abc() 
+        {
+            var photo = document.getElementsByTagName('input')[0].value
+            var nav = document.getElementsByTagName('h1')[0].innerText
+            var name = document.getElementsByTagName('input')[1].value
+            var add = document.getElementsByTagName('textarea')[0].value
+            var con = document.getElementsByTagName('input')[2].value
+            var email = document.getElementsByTagName('input')[3].value
+            var dob = document.getElementsByTagName('input')[4].value
+            
+            // var male = document.getElementsByClassName('male')[0].value
+            // var female = document.getElementsByClassName('fm')[0].value
+            // var other = document.getElementsByClassName('oth')[0].value
+
+            document.getElementsByTagName('img')[0].src = photo
+            document.getElementsByTagName('h1')[1].innerText = nav
+            document.getElementsByTagName('h4')[0].innerText = name
+            document.getElementsByTagName('h4')[1].innerText = add
+            document.getElementsByTagName('h4')[2].innerText = con
+            document.getElementsByTagName('h4')[3].innerText = email
+            document.getElementsByTagName('h4')[4].innerText = dob
+        
+        
+            var radio = document.getElementsByName('gender')
+            for(var i=0;i<radio.length;i++)
+            {
+                if(radio[i].checked)
+                {
+                    document.getElementsByTagName('p')[0].innerText = radio[i].value
+                }
+            }
+        
+            
+        }
+       
+        
+    </script>
+</body>
+
+</html>

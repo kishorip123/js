@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .input{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        
+        
+        div{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <section class="box1">
+    <div class="box">
+        
+    </div>
+    <!-- <div class="box">
+        
+    </div>
+    <div class="box">
+        
+    </div>
+    <div class="box">
+        
+    </div> -->
+</section>
+
+<section class="input1">
+
+        <input type="text" value="" onkeyup="_color(value)">
+        <!-- <input type="text" value="" onkeyup="_blue(value)">
+        <input type="text" value="" onkeyup="ani(value)">
+        <input type="text" value="" onkeyup="ani(value)"> -->
+    </section>
+    
+    <script>
+        function _color(txt)
+        {
+            document.getElementsByClassName('box')[0].style.backgroundColor = txt;
+        }
+    
+    </script>
+    
+</body>
+</html>

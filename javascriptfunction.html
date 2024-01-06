@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function avg(a,b)    //create fuction
+        // {
+        //     return(a+b)/2;
+        // }
+        // c=avg(4,6);     //getting number avg calling function
+        // console.log(c);
+
+        // function in javascript
+        // 1) DRY do not reapet yourself
+        function cgpa(a,b)
+        {
+            return(a+b)/2;
+        }
+        s1=cgpa(90,80);
+        s2=cgpa(70,80);
+        s3=cgpa(60,82);
+        console.log(s1,s2,s3);
+        if(s1>s2 && s1>s3)
+        {
+            console.log("s1 is highest student");
+        }
+        else if(s2>s1 && s2>s3)
+        {
+            console.log("s2 is 2nd highest");
+        }
+        else{
+            console.log("s3 is highest");
+        }
+    </script>
+</body>
+</html>

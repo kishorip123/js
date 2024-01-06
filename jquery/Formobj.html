@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: none;
+            height: 500px;
+            width: 50%;
+            
+            
+        }
+        .fm{
+            height: 500px;
+            width: 50%;
+            text-align: center;
+            border: 2px dotted black;
+            margin-left: 300px;
+        }
+        input{
+            margin: 10px;
+        }
+        .main2{
+            text-align:left;
+            border: 2px dotted red;
+            margin-left: 300px;
+            width: 50%;
+            padding-left: 200px;
+
+        }
+        span{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="fm">
+            <h1>Input Form</h1>
+            <input type="text" id="name"><br>
+            <input type="text" id="roll"><br>
+            <input type="text" id="email"><br>
+            <input type="text" id="contact"><br>
+            <button>submit</button>
+        </div>
+        <div class="main main2">
+            <h1 style="color: orange;">TechRel Form</h1>
+            <h1>Name: <span id="_n"></span></h1>
+            <h1>Roll: <span id="_r"></span></h1>
+            <h1>Email: <span id="_e"></span></h1>
+            <h1>Contact: <span id="_c"></span></h1>
+
+        </div>
+    </section>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+         $('button').click(function()
+        {
+        var n=$('#name').val()
+        var r=$('#roll').val()
+        var e=$('#email').val()
+        var c=$('#contact').val()
+        var obj={
+            name:n,
+            roll:r,
+            email:e,
+            contact:c
+        }
+        $('#_n').text(obj.name)
+        $('#_r').text(obj.roll)
+        $('#_e').text(obj.email)
+        $('#_c').text(obj.contact)
+        $('.fm').addClass('main')
+        $('.main2').removeClass('main')
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            padding: 55px 85px 55px 85px;
+            margin: 100px 0px 50px 0px;
+            background-color: purple;
+        }
+
+        div {
+            height: 400px;
+            width: 100%;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .html {
+            height: 400px;
+            width: 50%;
+            background-color: black;
+            color: white;
+
+        }
+
+        .login {
+            height: 400px;
+            width: 100%;
+            background-color: white;
+            color: black;
+
+
+        }
+
+        #html {
+            padding: 65px 0px 20px 0px;
+
+        }
+
+        #login {
+            font-size: xxx-large;
+            margin: 0%;
+            padding-top: 24px;
+
+        }
+
+        button {
+            padding: 11px 103px 11px 103px;
+            margin: 10px;
+            border-radius: 8px;
+
+        }
+
+        h5 {
+            margin: 0px 0px 40px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        input {
+
+            padding: 11px 90px 11px 90px;
+            margin-bottom: 16px;
+        }
+
+        .a {
+            padding-left: 112px;
+        }
+
+        #z {
+            padding: 11px 121px 11px 121px;
+            margin: 10px;
+            background-color: blue;
+            color: white;
+        }
+        .fa{
+            display: none;
+        }
+        @media screen and (max-width: 1200px) {
+            section {
+                flex-wrap: wrap-reverse;
+                justify-content: center;
+
+
+
+            }
+
+            .html {
+                margin: 10px;
+                overflow: auto;
+            }
+
+            .login {
+                margin: 10px;
+                overflow: auto;
+            }
+
+        }
+
+        @media screen and (max-width: 900px) {
+            section {
+                flex-wrap: wrap-reverse;
+                justify-content: center;
+
+
+            }
+
+            .html {
+                margin: 10px;
+                overflow: auto;
+            }
+
+            .login {
+                margin: 10px;
+                overflow: auto;
+            }
+
+            button {
+                width: 54%;
+                padding: 3%;
+                border: none;
+            }
+            .fa{
+                
+            }
+        }
+        @media screen and (max-width:700px) {
+            section {
+                flex-wrap: wrap-reverse;
+                justify-content: center;
+
+
+            }
+
+            .html {
+                margin: 10px;
+                overflow: auto;
+            }
+
+            .login {
+                margin: 10px;
+                overflow: auto;
+            }
+
+            button {
+                width: 54%;
+                padding: 3%;
+                border: none;
+            }
+            .fa{
+                display: block;
+            }
+            span{
+                display: none;;
+            }
+            #z{
+                text-align: center;
+                padding: 2px;
+            }
+        }
+        @media screen and (max-width:550px) {
+            section {
+                flex-wrap: wrap-reverse;
+                justify-content: center;
+
+
+            }
+
+            .html {
+                margin: 10px;
+                overflow: auto;
+            }
+
+            .login {
+                margin: 10px;
+                height: 300px;
+                overflow: auto;
+            }
+
+            button {
+                width: 54%;
+                padding: 3%;
+                border: none;
+            }
+            .fa{
+                display: block;
+            }
+            span{
+                display: none;;
+            }
+            #z{
+                text-align: center;
+                padding: 2px;
+            }
+            input{
+                padding: 0%;
+            }
+            .a{
+                margin: 5px;
+                padding: 0%;
+            }
+           h1{
+            font-size: small;
+           }
+           #login{
+            font-size:x-large;
+            margin: 5px;
+            padding: 10px;
+        
+
+           }
+           
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="html">
+            <h1 id="html">TOP HTML</h1>
+            <p>Login using social media to gety quick access</p>
+            <br>
+            <button style="background-color: blue; color: white;"><i class="fa fa-facebook"></i> <span>signin with Facebook</span></button><br>
+            <button style="background-color: skyblue; color: white;"><i class="fa fa-twitter"></i> <span>signin with twitter</span></button><br>
+            <button style="background-color: red; color: white;"><i class="fa fa-google"></i> <span>signin with google</span></button>
+        </div>
+        <div class="login">
+            <h1 id="login">login to your account</h1>
+            <h5>Dont have an account! <a href="">Sign up free!</a></h5>
+            <input style="box-shadow: 2px 2px 4px grey; border: none;" type="text" placeholder="Email address"><br>
+            <input style="box-shadow: 2px 2px 4px grey; border: none;" type="password" placeholder="password" id=""><br>
+            <input type="checkbox">Remember me
+            <a class="a" href="">Forgot password!</a><br>
+            <button id="z" style="color: white;">Login with email</button>
+
+        </div>
+    </section>
+</body>
+
+</html>

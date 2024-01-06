@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    section {
+       
+        
+        
+    }
+
+    ul {
+        display: flex;
+        
+      
+        
+    }
+
+    li {
+        list-style: none;
+        margin: 3px;
+        padding: 3px;
+    }
+
+    .output{
+       
+        width: 72%;
+        height: 50px;
+        margin-top: 10px;
+        background-color: rgb(30, 28, 28);
+        color: white;
+        
+
+    }
+    p{
+        margin: 0px;
+        text-align: end;
+    }
+    .main{
+        border: 1px solid black;
+        margin: 100px 667px 100px 581px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+       
+    }
+    button
+    {
+        border-radius: 5px;
+        font-size: 20px;
+        padding: 3px 9px 3px 9px;
+        box-shadow: 3px 4px 2px gray;
+        border: none;
+
+    }
+    button:hover
+    {
+        background-color: yellowgreen;
+        color: black;
+    }
+    .top{
+        font-size: 20px;
+    }
+    .down{
+        font-size: 23px;
+    }
+    select{
+        padding-top: 5px;
+        margin-top: 5px;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="main">
+
+        <ul>
+            <div class="output">
+                <p class="top"></p>
+                <p class="down"></p>
+            </div>
+        </ul>
+       
+        <ul>
+            <li><button onclick="cal(innerText)">7</button></li>
+            <li><button onclick="cal(innerText)">8</button></li>
+            <li><button onclick="cal(innerText)">9</button></li>
+            <li><button onclick="cal(innerText)">*</button></li>
+        </ul>
+        <ul>
+            <li><button onclick="cal(innerText)">4</button></li>
+            <li><button onclick="cal(innerText)">5</button></li>
+            <li><button onclick="cal(innerText)">6</button></li>
+            <li><button onclick="cal(innerText)">-</button></li>
+        </ul>
+        <ul>
+            <li><button onclick="cal(innerText)">1</button></li>
+            <li><button onclick="cal(innerText)">2</button></li>
+            <li><button onclick="cal(innerText)">3</button></li>
+            <li><button onclick="cal(innerText)">+</button></li>
+        </ul>
+        <ul>
+            <li><button onclick="cal(innerText)">0</button></li>
+            <li><button onclick="cal(innerText)">%</button></li>
+            <li><button onclick="cal(innerText)">/</button></li>
+            <li><button class="b" onclick="result()">=</button></li>
+        </ul>
+        <ul>
+            <li><button class="b" onclick="clea()">clear</button></li>
+            <li><button class="b" onclick="backSpace()">back</button></li>
+
+            <li><select onclick="cal(value)" name="inner">
+                <option name="ab" value=""></option>
+                <option name="ab" value="x*x">x*x</option>
+                <option name="ab" value="lg">lg</option>
+                <option name="ab" value="sin">sin</option>
+                <option name="ab" value="cos">cos</option>
+                <option name="ab" value="tan">tan</option>
+                <option name="ab" value="sinh">sinh</option>    
+                <option name="ab" value="cosh">cosh</option>    
+                <option name="ab" value="tanh">tanh</option>    
+
+            </select></li>
+           
+        </ul>
+    </div>
+  
+
+    </section>
+    <script>
+        function cal(txt) {
+
+            document.getElementsByClassName('top')[0].innerText += txt
+        
+
+        }
+        function result() {
+            var res = document.getElementsByClassName('top')[0].innerText
+            document.getElementsByClassName('down')[0].innerText = eval(res)
+
+            var r = document.getElementsByClassName('top')[0].innerText
+            document.getElementsByTagName('down')[0].value = eval(r);
+        }
+        function clea() {
+
+            var data = document.getElementsByTagName('div')[0].innerText
+            document.getElementsByClassName('output')[0].innerText = ''
+
+
+        }
+        function backSpace() {
+            var back = document.getElementsByClassName('output')[0].innerText
+            document.getElementsByClassName('output')[0].innerText = back.slice(0, -1)
+        }
+       
+
+    </script>
+
+</body>
+
+</html>

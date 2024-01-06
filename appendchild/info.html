@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+
+
+    <script>
+        var info = [
+            {
+                id: 1,
+                name: "kishori",
+                DOB: "r17 / 8 / 2001",
+                url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3qI-ymvLsbE6xmOTqAAxItNXApi_KAPTOELOHO-onww&s"
+            },
+            {
+                id: 2,
+                name: "sakshi",
+                DOB: "17 / 8 / 2001",
+                url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3qI-ymvLsbE6xmOTqAAxItNXApi_KAPTOELOHO-onww&s"
+            },
+            {
+                id: 3,
+                name: "priya",
+                DOB: "17 / 8 / 2001",
+                url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3qI-ymvLsbE6xmOTqAAxItNXApi_KAPTOELOHO-onww&s"
+            },
+            {
+                id: 4,
+                name: "sayali",
+                DOB: "17 / 8 / 2001",
+                url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3qI-ymvLsbE6xmOTqAAxItNXApi_KAPTOELOHO-onww&s"
+            },
+            {
+                id: 5,
+                name: "nikita",
+                DOB: "17 / 8 / 2001",
+                url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3qI-ymvLsbE6xmOTqAAxItNXApi_KAPTOELOHO-onww&s"
+            },
+
+        ]
+        var user = document.getElementsByTagName('div')[0]
+        for (var i = 0; i < info.length; i++) {
+            user.innerHTML +=`
+            <ul>
+                <li><img src="${info[i].url}>"</li>
+                <li>${info[i].id}</li>
+                <li>${info[i].name}</li>
+                <li>${info[i].DOB}</li>
+               
+            </ul>`
+
+        }
+
+    </script>
+
+</body>
+
+</html>

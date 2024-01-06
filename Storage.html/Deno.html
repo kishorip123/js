@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"><br>
+    <input type="text"><br>
+    <button onclick="sub()">submit</button><br>
+    <script>
+        //localStorage.setItem('email','kishoripawar1234@gmail.com')
+        //sessionStorage.setItem('email','kishoripawar1234@gmail.com')
+
+
+        // var _key=prompt("enter key");
+        // var _value=prompt("enter value");
+        // localStorage.setItem(_key,_value)
+
+
+        function sub()
+        {
+            var _i1=document.getElementsByTagName('input')[0].value
+            var _i2=document.getElementsByTagName('input')[1].value
+
+           // localStorage.setItem(_i1,_i2);
+           if(_i1=='roll' && _i2=='devloper')
+        {
+            document.write(" Welcome to wolrd");
+        }
+        else{
+            document.write("Invalid");
+            
+        }
+
+            
+        }
+
+
+        document.write(localStorage.getItem('roll'))
+
+       
+
+        
+
+        
+
+    </script>
+    
+</body>
+</html>

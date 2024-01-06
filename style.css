@@ -1,0 +1,128 @@
+/*
+span tag=
+<h1>Tech
+<span style
+>Rel</span
+
+</h1>
+
+
+
+
+[A]simple=
+
+    {
+        1) universal selector= style apply on whole page
+                                they are using with---- *{ }
+        2)tag selector : 
+        3)class selector :so many class we can created---- .class name
+       4) id selector: for id we are use----- # id name its unique 
+    }
+
+
+ [B] combinater= parent child,multiple tags applying 
+     {
+        p,h1,h2      ------ multiple tags .its can apply on all tag(p,h1,h2)
+        {
+              color: red;
+                }
+
+     ------------inside -----------------------
+
+
+        div h1
+        {
+                          -------------div  inside h1
+        } 
+
+        div>h1,p     ------- inside div  specific tag                                                                           
+        {
+            color:red;
+        }
+
+        .xyz >div >h1
+        {
+                         -----------inside to inside to inside
+        }
+
+    --------------------Outside-------------------------
+
+        div +p     -----exactly outside of div  para select  
+        {
+            color:green;
+        }
+
+
+
+        div ~ p       ------- outside div All tags apply
+        {
+            color:yellow;
+        }
+     }
+
+
+
+ [C] pseudo= its indirectly apply style ,visited ,input:focus
+                it is indicate with : and hover
+     {
+       p:hover{ color:red;}
+       
+     }
+
+
+
+[D]attribative= specific link  tags on apply css
+
+    [href="https://retail.onlinesbi.sbi/retail/login.htm"]
+    {  
+
+    background-color:pink;
+    }             
+    -- --------------for particular link---------------
+
+
+    <a href="" target="_blank"> linkkkk</a>
+    
+    [target="_blank"]
+    {
+        color: red;
+    }
+    -----------particular tag----------------------------
+
+    <input="text" name="abc">gwehfj</input>
+
+    [name="abc"]
+    {
+        height=100px;
+    }
+
+
+[E] Element pseudo selector: it is indicate with ::
+
+    p::after{
+               contennt:url(url); 
+
+             }
+
+     p::before{
+               contennt:url(url); 
+
+             }
+     P:: first-letter
+                {
+                 color:red;
+                 font-size:50px;
+
+                 }
+    P:: first-line
+                {
+                   color:red;
+                 font-size:50px;
+                    
+                 }
+    
+    */
+
+a:link{
+    background-color:yellow;
+}

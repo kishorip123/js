@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter Name"><br>
+    <input type="text" placeholder="Email"><br>
+    <input type="text" placeholder="Contact"><br>
+    <button onclick="sendData()">Submit</button><br>
+
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>CONTACT</th>
+
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        var array = []
+
+        function sendData() {
+            var _name = document.getElementsByTagName('input')[0].value
+            var _email = document.getElementsByTagName('input')[1].value
+            var _contact = document.getElementsByTagName('input')[2].value
+
+
+            var obj = {
+                name: _name, email: _email, contact: _contact
+            }
+            array.push(obj)
+            console.log(array)
+            showData()
+
+        }
+
+        function showData() {
+            var _tbody = document.getElementsByTagName('tbody')[0]
+            _tbody.innerHTML = ""
+            for (i = 0; i < array.length; i++) {
+                _tbody.innerHTML += `
+                <tr>
+                <td>${array[i].name}</td>
+                <td>${array[i].email}</td>
+                <td>${array[i].contact}></td>
+                </tr>
+                `
+
+            }
+        }
+    </script>
+</body>
+
+</html>

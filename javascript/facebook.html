@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=c, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 50%;
+            height: 50%;
+            border: 1px solid black;
+            border-radius: 0px 5px 0px 5px;
+            
+            
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <img src="https://hindubabynames.info/wp-content/themes/hbn_download/download/social-media/facebook-logo.png" alt="" onclick="abc()" data-val="http://www.facebook.com">
+
+    <script>
+        
+        function abc() {
+            var a = document.getElementsByTagName('img')[0].getAttribute('data-val')
+            window.open(a)
+            console.log(a);
+        }
+                
+    </script>
+
+</body>
+
+</html>

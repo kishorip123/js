@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input  onmouseenter="xyz()" onmouseleave="abc(value)" type="text" value="kishori" name="ab"><br>
+    <input  onmouseenter="xyz()" onmouseleave="abc(value)" type="text" value="78965412" name="ab"><br>
+
+    <script>
+        
+       
+        function xyz()
+        {
+            document.getElementsByTagName('input')[0].value = 'sakshi pawar'
+            document.getElementsByTagName('input')[1].value = '8888888888'
+        }
+        function abc(txt)
+        {
+        document.getElementsByTagName('input')[0].value = txt
+        document.getElementsByTagName('input')[1].value = txt
+
+
+        }
+        // for(var j=0;j<i.length;j++)
+        // {
+        //     if(i[j].addEventListener('mouseenter',function xyz()))
+        //     {
+        //         document.getElementsByTagName('input')[0].value = 'sakshi'
+        //     }
+        // }
+    </script>
+    
+</body>
+</html>

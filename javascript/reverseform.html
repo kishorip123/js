@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 86px;
+            width: 100px;
+            padding: 0px 0px 12px 250px;
+
+
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            margin: 50px;
+        }
+
+        div {
+            border: none;
+            box-shadow: 7px 6px 9px grey;
+            background-color: plum;
+            margin: 50px;
+            padding: 0px 0px 73px 0px;
+            height: 530px;
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        input {
+            margin: 29px 0px 0px 97px;
+            padding: 10px 98px 5px 107px;
+            border: none;
+            box-shadow: 5px 5px 5px grey;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        .main {
+            height: 448px;
+            padding-top: 100px;
+
+
+        }
+
+        button:hover {
+            background-color: rgb(203, 250, 50);
+            color: black;
+        }
+
+        button {
+            margin: 30px 0px 0px 17px;
+            padding: 5px 20px 5px 20px;
+            box-shadow: 5px 5px 5px grey;
+            border: none;
+            border-radius: 5px;
+        }
+
+        p {
+            margin: 45px 0px 0px 35px;
+            font-size: 20px;
+            align-items: center;
+        }
+
+        .c {
+            margin: 19px 0px 0px 264px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            
+            <img src="https://www.pngitem.com/pimgs/m/638-6381558_time-shift-software-flat-icon-student-girl-hd.png"
+                alt="">
+            <p>kishori pawar</p><br>
+            <p> kishoripawar@123gmail.com</p><br>
+            <p>7972648712</p><br>
+            <p>pune</p><br>
+             <input type="date" value="12/11/2023" name="" id=""><br> 
+            <button onclick="abc()">click</button>
+
+        </div>
+
+        <div class="main">
+            <input type="text" name="" id="">
+            <input type="text"><br>
+            <input type="text"><br>
+            <input type="text"><br>
+            <input type="text"><br>
+            <input type="text"><br>
+          
+
+            <button class="c" onclick="cl()">clear</button>
+        </div>
+    </section>
+    <script>
+        function abc() {
+            var pic = document.getElementsByTagName('img')[0].src
+            var name = document.getElementsByTagName('p')[0].innerText
+            var email = document.getElementsByTagName('p')[1].innerText
+            var con = document.getElementsByTagName('p')[2].innerText
+            var add = document.getElementsByTagName('p')[3].innerText
+            var date = document.getElementsByTagName('input')[0].value
+
+            document.getElementsByTagName('input')[1].value = pic
+            document.getElementsByTagName('input')[2].value = name
+            document.getElementsByTagName('input')[3].value = email
+            document.getElementsByTagName('input')[4].value = con
+            document.getElementsByTagName('input')[5].value = add
+             document.getElementsByTagName('input')[6].value = date
+
+
+        }
+        function cl() {
+            document.getElementsByTagName('img')[0].src = ''
+            document.getElementsByTagName('input')[0].value = ''
+            document.getElementsByTagName('input')[1].value = ''
+            document.getElementsByTagName('input')[2].value = ''
+            document.getElementsByTagName('input')[3].value = ''
+            document.getElementsByTagName('input')[4].value = ''
+            document.getElementsByTagName('input')[5].value = ''
+            document.getElementsByTagName('input')[6].value = ''
+        }
+    </script>
+
+</body>
+
+</html>

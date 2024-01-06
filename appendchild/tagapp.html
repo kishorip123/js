@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter tag">
+    <input type="text" placeholder="enter txt">
+    <button onclick="crt()">create tag</button>
+    <button onclick="add()">add text</button>
+
+    <script>
+        function crt()
+        {
+            var i = document.getElementsByTagName('input')[0].value
+            var tag = document.createElement(i)
+             console.log(tag);     
+        }
+        function add()
+        {
+            var it = document.getElementsByTagName('input')[0].value
+            var itx = document.getElementsByTagName('input')[1].value
+            var tag = document.createElement(it)
+            var txt = document.createTextNode(itx)
+           tag.appendChild(txt)
+           document.getElementsByTagName('body')[0].appendChild(tag)
+           console.log(tag);
+
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div>
+        <input type="text" placeholder="enter name"><br>
+        <input type="text" placeholder="enter seat no"><br>
+        <input type="text" placeholder="enter price"><br>
+        <input type="date" placeholder="date"><br>
+        <select>
+            <option>select</option>
+            <option value="Animal">Animal</option>
+            <option value="JImmma2">JImmma2</option>
+            <option value="Tiger3">Tiger3</option>
+        </select><br>
+        <button onclick="abc()">Submit</button><br>
+    </div>
+</section>
+        
+   
+    <script>
+        function abc()
+        {
+            var sect = document.createElement('section')
+            var di1 = document.createElement('div')
+            var di2 = document.createElement('div')
+         
+            document.getElementsByTagName('body')[0].appendChild(sect)
+            document.getElementsByTagName('section')[1].appendChild(di2)
+            document.getElementsByTagName('section')[1].appendChild(di1)
+            
+        
+    
+            var h11 = document.createElement('h1')
+            var crtnav = document.createTextNode("Movie Ticket")
+            h11.appendChild(crtnav)
+            document.getElementsByTagName('div')[2].appendChild(h11)
+
+            var mo = document.createElement('h1')
+            var n = document.createElement('h3')
+            var s = document.createElement('h3')
+            var p = document.createElement('h3')
+            var d = document.createElement('h3')
+
+            var i = document.getElementsByTagName('input')[0].value
+            var is = document.getElementsByTagName('input')[1].value
+            var ip =  document.getElementsByTagName('input')[2].value
+            var id =  document.getElementsByTagName('input')[3].value
+            var sel = document.getElementsByTagName('select')[0].value
+
+            var crtn = document.createTextNode("NAME: " + i)
+            var crts = document.createTextNode("SEAT: "+ is)
+            var crtp = document.createTextNode("PRISE: "+ip)
+            var crtd = document.createTextNode("DATE: " + id)
+            var crtse = document.createTextNode(sel)
+
+            n.appendChild(crtn)
+            s.appendChild(crts)
+            p.appendChild(crtp)
+            d.appendChild(crtd)
+            mo.appendChild(crtse)
+
+            document.getElementsByTagName('div')[2].appendChild(mo)
+            document.getElementsByTagName('div')[2].appendChild(n)
+            document.getElementsByTagName('div')[2].appendChild(s)
+            document.getElementsByTagName('div')[2].appendChild(p)
+            document.getElementsByTagName('div')[2].appendChild(d)
+            
+
+            var tagt = document.createElement('h2')
+            var tags = document.createElement('h2')
+            var tagd = document.createElement('h4')
+            var tagh = document.createElement('h1')
+
+            var th = document.createTextNode("Threater 1")
+            var ds = document.createTextNode("SEAT: "+is)
+            var td = document.createTextNode("DATE: " + id)
+            var txh = document.createTextNode("no. 00000")
+
+            tagh.appendChild(txh)
+            document.getElementsByTagName('div')[1].appendChild(tagh)
+            tagt.appendChild(th)
+            document.getElementsByTagName('div')[1].appendChild(tagt)
+            tags.appendChild(ds)
+            document.getElementsByTagName('div')[1].appendChild(tags)
+            tagd.appendChild(td)
+            document.getElementsByTagName('div')[1].appendChild(tagd)
+            
+        
+        
+
+            var div1 = document.getElementsByTagName('div')[1]
+            div1.style.height = `270px`
+            div1.style.width = `23%`
+            div1.style.textAlign = `center`
+            div1.style.border = `1px solid black`
+            div1.style.margin =`100px 0px 0px 250px`
+            div1.style.padding =`0px 0px 0px 0px`
+            div1.style.borderRadius = `7px`
+
+            var div2 = document.getElementsByTagName('div')[2]
+            div2.style.height = `270px`
+            div2.style.width = `77%`
+            div2.style.textAlign = `left`
+            div2.style.border = `1px solid black`
+            div2.style.backgroundColor = 'white'
+            div2.style.color = `black`
+            div2.style.borderRadius = `7px`
+            div2.style.margin =`100px 250px 0px 0px`
+            div2.style.padding =`0px 0px 0px 30px`
+
+            var s1 = document.getElementsByTagName('h1')[0]
+            s1.style.backgroundColor = `rgb(25,25,53)`
+            s1.style.borderRadius = `5px`
+            s1.style.color = `white`
+            s1.style.padding = `5px`
+            s1.style.textAlign = `center`
+            //s1.style.marginRight = `5px`
+
+            var s2 = document.getElementsByTagName('h1')[1]
+            s2.style.backgroundColor = `rgb(25,25,53)`
+            s2.style.borderRadius = `5px`
+            s2.style.color = `white`
+            s2.style.padding = `5px`
+            s2.style.textAlign = `end`
+            //s2.style.marginRight = `5px`
+
+
+            var h22 = document.getElementsByTagName('h2')[0]
+            h22.style.padding =`50px 0px 0px 0px`
+            var h22 = document.getElementsByTagName('h2')[1]
+            h22.style.padding =`0px 0px 10px 0px`
+            
+            
+             
+
+            var S = document.getElementsByTagName('section')[1]
+            S.style.display = `flex`
+
+        }
+    </script>
+    
+</body>
+</html>

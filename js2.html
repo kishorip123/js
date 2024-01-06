@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            justify-content: center;
+            display: flex;
+        }
+
+        .inner {
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="box">
+            <div class="inner">
+
+            </div>
+            <input onkeyup="anima(value)" type="text" name="" id="">
+        </div>
+    </section>
+    <script>
+        function anima(xyz) {
+            console.log(xyz);
+            // var ani = document.getElementsByClassName('inner')[0]
+            // ani.style.background = xyz
+            // ani.style.borderRadius = xyz
+            var _div = document.getElementsByClassName('inner')[0]
+            _div.style.background = xyz
+            _div.style.borderRadius = xyz
+            //_div.style = xyz  multiple properties
+        
+        
+
+
+        }
+    </script>
+
+</body>
+
+</html>

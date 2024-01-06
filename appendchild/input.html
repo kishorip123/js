@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+   
+    <input type="text"><br>
+    <input type="text"><br>
+    <button onclick="abc()">click</button>
+
+
+    <script>
+        function abc()
+        {
+            var i = document.getElementsByTagName('input')[0].value
+            var tag = document.createElement(i);
+            var i2 = document.getElementsByTagName('input')[1].value
+            var txt = document.createTextNode(i2);
+            tag.appendChild(txt);
+            document.getElementsByTagName('body')[0].appendChild(tag)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+
+
+            display: flex;
+            background-color: black;
+        }
+
+        li {
+            list-style: none;
+            margin: 2px;
+            background-color: blue;
+            border: 2px solid red;
+            border-radius: 20px;
+
+        }
+
+        section {
+            border: 2px solid red;
+            background-color: black;
+            width: 15%;
+            justify-content: center;
+
+        }
+
+        input {
+            margin: 5px;
+            background-color: aqua;
+            justify-content: space-evenly;
+        }
+
+        .a {
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: blue;
+            font-size: 30px;
+            border-radius: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <button class="a" onclick="clr()">clear</button>
+        <button class="a" onclick="backSpace()">back</button><br>
+        <input type="text" name="" id="">
+        <div>
+            <ul>
+                <li><button onclick="getValue(this.innerText)">7</button></li>
+                <li><button onclick="getValue(this.innerText)">8</button></li>
+                <li><button onclick="getValue(this.innerText)">9</button></li>
+                <li><button onclick="getValue(this.innerText)">%</button></li>
+            </ul>
+            <ul>
+                <li><button onclick="getValue(this.innerText)">4</button></li>
+                <li><button onclick="getValue(this.innerText)">5</button></li>
+                <li><button onclick="getValue(this.innerText)">6</button></li>
+                <li><button onclick="getValue(this.innerText)">*</button></li>
+            </ul>
+            <ul>
+                <li><button onclick="getValue(this.innerText)">1</button></li>
+                <li><button onclick="getValue(this.innerText)">2</button></li>
+                <li><button onclick="getValue(this.innerText)">3</button></li>
+                <li><button onclick="getValue(this.innerText)">-</button></li>
+            </ul>
+            <ul>
+                <li><button onclick="getValue(this.innerText)">0</button></li>
+                <li><button onclick="getValue(this.innerText)">.</button></li>
+                <li><button onclick="getValue(this.innerText)">+</button></li>
+                <li><button onclick="cal()">=</button></li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        function getValue(data) {
+            console.log(data);
+            document.getElementsByTagName('input')[0].value += data
+        }
+        function cal() {
+            var data = document.getElementsByTagName('input')[0].value
+            document.getElementsByTagName('input')[0].value = eval(data)
+            console.log(eval(data));
+        }
+        function clr() {
+            var data = document.getElementsByTagName('input')[0]
+            data.value = ""
+        }
+        function backSpace() {
+            var bck = document.getElementsByTagName('input')[0].value
+            document.getElementsByTagName('input')[0].value = bck.slice(0, -1)
+        }
+    </script>
+</body>
+
+</html>

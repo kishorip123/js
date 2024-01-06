@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <Style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            width: 100%;
+
+            background-color: white;
+            color: black;
+            background-position: bottom right;
+
+        }
+
+        .services {
+            background-color: white;
+            color: black;
+        }
+
+        .navbar>.im {
+            height: 50px;
+            width: 50px;
+        }
+
+        .navbar>.im>img {
+            height: 73px;
+            padding-left: 100px;
+        }
+
+        .navbar>.menu {
+            height: 50px;
+            width: 60px;
+        }
+
+        .navbar>.menu>img {
+            height: 50px;
+            padding-top: 16px;
+        }
+
+        .sd {
+            background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20201026/pngtree-futuristic-shape-abstract-background-chemistry-technology-concept-for-website-image_438818.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            height: 300px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            color: rgb(50, 147, 147);
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .services>.D>div {
+            height: 300px;
+            width: 300px;
+
+        }
+
+        .D {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .d1>img {
+            height: 117px;
+            width: 100px;
+            text-align: center;
+            border-radius: 58px;
+            box-shadow: 0px 0px 19px gray;
+        }
+
+        .d2>img {
+            height: 117px;
+            width: 100px;
+            text-align: center;
+            box-shadow: 0px 0px 19px gray;
+            border-radius: 58px;
+
+        }
+
+        .d3>img {
+            height: 117px;
+            width: 100px;
+            text-align: center;
+            box-shadow: 0px 0px 19px gray;
+            border-radius: 58px;
+
+        }
+
+        .d1 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .d2 {
+
+            text-align: center;
+            padding: 10px;
+        }
+
+        .d3 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .ic {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 30px;
+        }
+
+        .icon>.ic>div {
+            height: 300px;
+            width: 300px;
+            margin-bottom: 22px;
+            text-align: center;
+        }
+
+
+        .fa {
+
+            font-size: 90px;
+            border: 14px solid rgb(93, 93, 252);
+
+            border-radius: 74px;
+            padding: 24px;
+            margin-top: 100px;
+            background: white;
+            color: black;
+
+        }
+
+        .foot>.logo>ul>li>.fa {
+            background-color: black;
+            color: white;
+            border: none;
+
+        }
+
+        .name>h1 {
+            color: white;
+            padding-top: 15px;
+
+        }
+
+        .icon {
+            background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20201026/pngtree-futuristic-shape-abstract-background-chemistry-technology-concept-for-website-image_438818.jpg");
+            color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .client {
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+
+        .client>div {
+            height: 350px;
+            width: 300px;
+
+
+        }
+
+        .client>div>img {
+            height: 200px;
+            width: 100%;
+            padding-top: 50px;
+
+
+
+        }
+
+        .client>div>h1 {
+            padding-top: 100px;
+        }
+
+        .foot {
+            height: 112px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding-top: 103px;
+        }
+
+        .foot>.logo>ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .foot>.logo>ul>li {
+            list-style: none;
+
+        }
+
+        .foot>.logo>ul>li>.fa {
+            font-size: medium;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .list>ul {
+            display: flex;
+            justify-content: end;
+            margin-right: 50px;
+
+        }
+
+        .list>ul>li {
+            list-style: none;
+            padding: 10px;
+
+        }
+
+        .list>ul>li:hover {
+            color: blue;
+        }
+
+        .navbar>.menu {
+            height: 50px;
+            width: 50px;
+            display: none;
+            margin-top: 15px;
+
+        }
+
+        .navbar>.menu>img {
+            width: 100%;
+            height: 100%;
+            padding: 0px 0px 20px 0px;
+        }
+        .i1:hover{
+            box-shadow: 2px 2px 30px aqua; 
+        }
+        .i2:hover{
+            box-shadow: 2px 2px 30px aqua; 
+        }
+        .i3:hover{
+            box-shadow: 2px 2px 30px aqua; 
+        }
+
+       /* ******************************************************************* */
+
+        @media screen and (max-width: 925px) {
+            .D {
+                flex-wrap: wrap;
+                overflow: auto;
+            }
+
+            .ic {
+                flex-wrap: wrap;
+                overflow: auto;
+            }
+            .list>ul {
+                display: none;
+            }
+            .navbar>.menu {
+                display: block;
+            }
+
+            .navbar {
+                display: flex;
+                overflow: auto;
+                justify-content: space-between;
+                padding: 0px 50px 0px 0px;
+
+            }
+            
+
+        }
+
+        @media screen and (max-width:770px) {
+            .D {
+                flex-wrap: wrap;
+                overflow: auto;
+                
+            }
+
+            .ic {
+                flex-wrap: wrap;
+                overflow: auto;
+            }
+            .list>ul {
+                display: none;
+            }
+            .navbar>.menu {
+                display: block;
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 50px 0px 0px;
+                overflow: auto;
+            }
+            .client {
+                flex-wrap: wrap;
+                justify-content: center;
+                overflow: auto;
+
+            }
+
+
+
+        }
+
+        @media screen and (max-width:650px) {
+            .D {
+                flex-wrap: wrap;
+                overflow: auto;
+            }
+            .ic {
+                flex-wrap: wrap;
+                overflow: auto;
+            }
+
+            .list>ul {
+                display: none;
+            }
+
+            .navbar>.menu {
+                display: block;
+
+            }
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 50px 0px 0px;
+                overflow: auto;
+
+            }
+
+            .client {
+                flex-wrap: wrap;
+                justify-content: center;
+                overflow: auto;
+
+            }
+        }
+
+        @media screen and (max-width:460px) {
+            .D {
+                flex-wrap: wrap;
+                overflow: auto;
+            }
+
+            .ic {
+                flex-wrap: wrap;
+                overflow: auto;
+            }
+
+            .list>ul {
+                display: none;
+            }
+
+            .navbar>.menu {
+                display: block;
+
+            }
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 50px 0px 0px;
+                overflow: auto;
+
+
+            }
+            .client {
+                flex-wrap: wrap;
+                justify-content: center;
+                overflow: auto;
+
+            }
+
+            .foot>.logo>ul {
+                overflow: hidden;
+                flex-wrap: wrap;
+
+            }
+
+        }
+    </Style>
+</head>
+
+<body>
+    <section class="project">
+        <section class="navbar">
+
+            <div class="im"><img
+                    src="https://media.licdn.com/dms/image/D4D0BAQH2AJgIFo728g/company-logo_200_200/0/1689058655785/wayzon_technology_services_pvt_ltd__logo?e=2147483647&v=beta&t=uim7iVrJElb5AvHxHaXLAtPAapq09urngYv9i44_gOM"
+                    alt=""></div>
+
+            <div class="list">
+                <ul>
+                    <li style="color: blue;">HOME</li>
+                    <li>ABOUT US</li>
+                    <li>SERVICES</li>
+                    <li>CAREER</li>
+                    <li>CASE STUDY</li>
+                    <li>CONTACT US</li>
+                </ul>
+            </div>
+            <div class="menu"><img src="https://cdn-icons-png.flaticon.com/512/4663/4663114.png" alt=""></div>
+
+        </section>
+        <sectionc class="slids">
+            <div class="sd"></div>
+    </section>
+
+    <section class="services">
+        <h1>Our Services</h1>
+        <h2>Striving To Establish-Expand And Grow</h2>
+        <div class="D">
+            <div class="d1">
+                <img class="i1"
+                    src="https://static.vecteezy.com/system/resources/previews/000/570/073/original/vector-desktop-computer-icon.jpg"
+                    alt="">
+                <h2>Web Application</h2>
+                <p>Being one of the top web development company,we have dedicated team of professional desighner and
+                    devleoper,creating powerful and engagging websites</p>
+
+            </div>
+            <div class="d2">
+                <img class="i2"
+                    src="https://static.vecteezy.com/system/resources/previews/007/873/184/non_2x/mobile-phone-icon-logo-illustration-suitable-for-web-design-logo-application-free-vector.jpg"
+                    alt="">
+                <h2>Web Application</h2>
+                <p>Being one of the top web development company,we have dedicated team of professional desighner and
+                    devleoper,creating powerful and engagging websites</p>
+
+            </div>
+            <div class="d3">
+                <img class="i3"
+                    src="https://png.pngtree.com/png-vector/20190307/ourmid/pngtree-vector-drawing-brush-icon-png-image_762944.jpg"
+                    alt="">
+                <h2>Web Application</h2>
+                <p>Being one of the top web development company,we have dedicated team of professional desighner and
+                    devleoper,creating powerful and engagging websites</p>
+
+            </div>
+        </div>
+    </section>
+    <section class="icon">
+        <div class="name">
+            <h1>Our Expertise</h1>
+        </div>
+        <div class="ic">
+            <div><i class="fa fa-desktop" aria-hidden="true"></i>
+                <h3>Custom PHP Web Development</h3>
+            </div>
+            <div><i class="fa fa-wordpress" aria-hidden="true"></i>
+                <h3>Wordpress</h3>
+            </div>
+            <div><i class="fa fa-cog" aria-hidden="true"></i>
+                <h3>CMS Web Development</h3>
+            </div>
+            <div><i class="fa fa-desktop" aria-hidden="true"></i>
+                <h3>Web App Development</h3>
+            </div>
+        </div>
+    </section>
+    <section class="client">
+        <div>
+            <h1>Our Happy Client</h1>
+        </div>
+        <div><img
+                src="https://static1.squarespace.com/static/5e594d76c3e493731b277e92/t/5e5983c276ad8278a6396796/1698185934835/"
+                alt=""></div>
+    </section>
+    <section class="foot">
+        <div>
+            <p>All Rights Reseved @ 2022 Wayzon Techgnology Services Pvt Ltd.</p>
+        </div>
+        <div class="logo">
+            <ul>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-google"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-linkedin"></i></li>
+            </ul>
+        </div>
+    </section>
+    </section>
+
+</body>
+
+</html>

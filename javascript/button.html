@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 100px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="_back(innerText)">red</button>
+    <button onclick="_back(innerText)">green</button>
+    <button onclick="_back(innerText)">purple</button>
+    <button onclick="_back(innerText)">black</button>
+    <button onclick="_back(innerText)">blue</button>
+    <button onclick="_back(innerText)">pink</button>
+
+    
+    <Script>
+        function _back(color){
+            document.getElementsByTagName('body')[0].style.backgroundColor = color
+        }
+        // function _green(){
+        //     document.getElementsByTagName('body')[0].style.backgroundColor = "green"
+        // }
+        // function _purple(){
+        //     document.getElementsByTagName('body')[0].style.backgroundColor = "purple"
+        // }
+        // function _black(){
+        //     document.getElementsByTagName('body')[0].style.backgroundColor = "black"
+        // }
+        // function _blue(){
+        //     document.getElementsByTagName('body')[0].style.backgroundColor = "blue"
+        // }
+        // function _pink(){
+        //     document.getElementsByTagName('body+++++++++++++++++')[0].style.backgroundColor = "pink"
+        // }
+    </Script>
+    
+</body>
+</html>

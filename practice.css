@@ -1,0 +1,40 @@
+p{
+    color: brown;
+}
+p>input:focus{
+    background-color: yellow;
+}
+input:focus{
+    background-color: pink;
+}
+button:hover{
+    background-color: brown;
+}
+#xyz{
+    color: black;
+
+}
+body{
+    background-color:cornsilk
+}
+.abc{
+    font-style: italic;
+}
+#xyz{
+    font-size: 20px ;
+}
+[href="https://retail.onlinesbi.sbi/retail/login.htm"]  /*attribute selector*/
+{
+    background-color:pink;
+}
+a:active{
+    color: darkgreen;
+}
+#abc:hover{
+    font-style: italic;
+    font-size: large;
+    background-color: pink;
+}
+div::first-letter{
+    color: blue;
+}

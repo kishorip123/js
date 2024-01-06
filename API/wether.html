@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 300px;
+            width: 300px;
+            margin-left: 20px;
+            margin-top: 20px;
+            
+        }
+        div{
+            text-align: center;
+            display: none;
+            box-shadow: 0px 0px 15px gray;
+            background-color: pink;
+            color: black;
+            height: 600px ;
+            width: 600px;
+            margin-left: 370px;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="ebter city"><br>
+    <button onclick="_wether()">Click</button>
+    <div>
+        <img src="" alt="">
+        <h1>City : <span></span></h1>
+        <h3>Max : <span class="max">C</span></h3>
+        <h3>Min : <span class="min">C</span></h3>
+        
+    </div>
+    <script>
+        async function _wether()
+        {
+            var cityName=document.getElementsByTagName('input')[0].value
+            try{
+            var responsee = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=3aa1154590a2bb5eb9ea4da07961f00a&units=metric`);
+
+            var _data= await responsee.json();
+
+            console.log(_data);
+            readData(_data);
+            }
+            catch(error){
+                console.log("Error Handle")
+            }
+        }
+        function readData(weatherData)
+        {
+            document.getElementsByTagName('span')[0].innerText=weatherData.name
+            document.getElementsByClassName('max')[0].innerText=weatherData.main.temp_max
+            document.getElementsByClassName('min')[0].innerText=weatherData.main.temp_max
+            document.getElementsByTagName('img')[0].src='https://cdn.jim-nielsen.com/ios/512/weather-2021-12-07.png'
+            document.getElementsByTagName('div')[0].style.display='block'
+        }
+    </script>
+    
+</body>
+</html>

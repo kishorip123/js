@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .show{
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <input type="text" placeholder="Enter name" id="1"><br>
+            <input type="text" placeholder="Enter roll" id="2"><br>
+            <input type="text" placeholder="enter Email" id="3"><br>
+            <input type="text" placeholder="Enter Contact" id="4"><br>
+            <button>click</button>
+            
+        </div>
+        <div class="show">
+            <h1>Name:<span id="_name"></span></h1>
+            <h1>Roll:<span id="_roll"></span></h1>
+            <h1>Email:<span id="_email"></span></h1>
+            <h1>Contact:<span id="_con"></span></h1>
+
+        </div>
+    </section>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $('button').click(function()
+        {
+        var n=$('#1').val()
+         $('#_name').text(n);
+
+        var r=$('#2').val()
+        $('#_roll').text(r);
+
+        var e=$('#3').val()
+        $('#_email').text(e);
+
+        var con=$('#4').val()
+        $('#_con').text(con);
+           
+        
+        
+        })
+    </script>
+    
+</body>
+</html>

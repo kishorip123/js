@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <section>
+        <input type="text">
+        <p></p>
+    </section>
+    <button>
+        click me
+    </button>
+
+    <script>
+        var bt = document.getElementsByTagName('button')[0]
+        var i = document.getElementsByTagName('input')[0]
+        bt.addEventListener('click',function()
+        {
+            document.getElementsByTagName('body')[0].style.background = 'pink'
+        })
+
+        bt.addEventListener('dblclick',function()
+        {
+            document.getElementsByTagName('body')[0].style.background = 'yellow'
+        })
+
+        i.addEventListener('keyup',function()
+        {
+            var tx = document.getElementsByTagName('input')[0].value
+            document.getElementsByTagName('p')[0].innerText = tx
+        })
+
+        bt.addEventListener('contextmenu',function()
+         {
+             document.getElementsByTagName('section')[0].style.border =` 2px solid red `
+        })
+        bt.addEventListener('mouseenter', function () {
+            document.getElementsByTagName('button')[0].style.display = 'none'
+        })
+        bt.addEventListener('mouseleave', function () {
+            document.getElementsByTagName('button')[0].style.display = 'block'
+        })
+
+
+
+        
+    </script>
+
+</body>
+
+</html>

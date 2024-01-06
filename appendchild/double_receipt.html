@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .form {
+            border: 1px solid red;
+            height: 500px;
+            width: 400px;
+            text-align: center;
+            margin: 20px;
+            padding: 50px 0px 0px 0px;
+           
+        }
+
+        .print {
+            border: 1px solid red;
+            height: 300px;
+            width: 700px;
+            padding: 10px 0px 0px 50px;
+            display: none;
+            margin: 10px;
+            background: linear-gradient(to right top, orange,white);
+        }
+
+        input {
+            padding: 10px 70px 10px 70px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        button {
+            margin: 10px;
+            padding: 5px;
+            border-radius: 7px;
+        }
+
+        span {
+            font-size: larger;
+            text-shadow: 2px 0px 6px gray;
+            padding: 14px;
+        }
+        .nn{
+            border: 1px solid red;
+            height: 300px;
+            width: 700px;
+            padding: 10px 0px 0px 50px;
+            display: none;
+            margin: 10px;
+            background: linear-gradient(to right top, orange,white);
+
+        }
+        #f{
+            color: orange;
+            
+        }p{
+            font-size:large;
+            
+        }
+        h1{
+            font-size:xx-large;
+            font-style: italic;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="main">
+        <div class="form">
+             
+            <h1>TechRel</h1>
+            <input type="text" placeholder="enter name"><br>
+            <input type="text" placeholder="Enter Education"><br>
+            <input type="text" placeholder="enter Course"><br>
+            <input type="text" placeholder="enter amount"><br>
+            <input type="date" placeholder="Enter Date"><br>
+            <button onclick="formm()">Submit</button><br>
+            
+        </div>
+    </div>
+    <div class="r">
+        <div class="print">
+            <h1>Fee Receipt</h1>
+            <p>Name:<span></span></p>
+            <p>Education:<span></span></p>
+            <p>Course<span></span></p>
+            <p>Amount<span></span></p>
+            <p>Date<span></span></p>
+
+        </div>
+        <button onclick="nextt()">Next</button><br>
+    
+    <div class="nn">
+        <h1>Fee Receipt</h1>
+        <p>Name:<span></span></p>
+        <p>Education:<span></span></p>
+        <p>Course<span></span></p>
+        <p>Amount<span></span></p>
+        <p>Date<span></span></p>
+    </div>
+</div>
+    </section>
+    <script>
+        function formm() {
+            var iname = document.getElementsByTagName('input')[0].value
+            var ieq = document.getElementsByTagName('input')[1].value
+            var ic = document.getElementsByTagName('input')[2].value
+            var iam = document.getElementsByTagName('input')[3].value
+            var id = document.getElementsByTagName('input')[4].value
+
+            document.getElementsByTagName('span')[0].innerText = iname
+            document.getElementsByTagName('span')[1].innerText = ieq
+            document.getElementsByTagName('span')[2].innerText = ic
+            document.getElementsByTagName('span')[3].innerText = iam
+            document.getElementsByTagName('span')[4].innerText = id
+
+            document.getElementsByClassName('print')[0].style.display='block'
+        }
+        function nextt()
+        {
+            var iname = document.getElementsByTagName('input')[0].value
+            var ieq = document.getElementsByTagName('input')[1].value
+            var ic = document.getElementsByTagName('input')[2].value
+            var iam = document.getElementsByTagName('input')[3].value
+            var id = document.getElementsByTagName('input')[4].value
+
+            document.getElementsByTagName('span')[5].innerText = iname
+            document.getElementsByTagName('span')[6].innerText = ieq
+            document.getElementsByTagName('span')[7].innerText = ic
+            document.getElementsByTagName('span')[8].innerText = iam
+            document.getElementsByTagName('span')[9].innerText = id
+
+            document.getElementsByClassName('nn')[0].style.display='block'
+
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

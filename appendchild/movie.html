@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            /* display: flex; */
+            justify-content: center;
+
+        }
+        ul{
+            display: flex;
+        }
+        li{
+            list-style: none; 
+        }
+        /* .input{
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <ul>
+                <button onclick="abc()"><li>a1</li></button>
+                <button onclick="abc()"><li>a2</li></button>
+                <button onclick="abc()"><li>a3</li></button>
+                <button onclick="abc()"><li>a4</li></button>
+            
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <button onclick="abc()"><li>a1</li></button>
+                <button onclick="abc()"><li>a2</li></button>
+                <button onclick="abc()"><li>a3</li></button>
+                <button onclick="abc()"><li>a4</li></button>
+            
+            </ul>
+        </div>
+        <div class="input">
+            <input type="text" placeholder="enter name"><br>
+            <input type="text" placeholder="enter email"><br>
+            <input type="text" placeholder="contact"><br>
+            <button onclick="sub()">submit</button>
+
+        </div>
+        <div>
+            <h1>Nmae: <span></span></h1>
+            <h1>Email: <span></span></h1>
+            <h1>contact: <span></span></h1>
+        </div>
+    
+    </section>
+    <script>
+        function abc()
+        {
+            var prt = prompt("enter name");
+            var prt1 = prompt("enter email");
+            var prt2 = prompt("enter con");
+            document.getElementsByTagName('input')[0].value = prt
+            document.getElementsByTagName('input')[1].value = prt1
+            document.getElementsByTagName('input')[2].value = prt2
+
+        }
+        function sub()
+        {
+
+            var i = document.getElementsByTagName('input')[0].value
+            var e = document.getElementsByTagName('input')[1].value
+            var c = document.getElementsByTagName('input')[2].value
+            document.getElementsByTagName('span')[0].innerText = i
+            document.getElementsByTagName('span')[1].innerText = e
+            document.getElementsByTagName('span')[2].innerText = c
+        }
+    </script>
+    
+</body>
+</html>
